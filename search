@@ -1,0 +1,36 @@
+           
+           
+           <div class="header_search">
+
+                <input class="search" type="text" placeholder="Buscar producto..">
+
+            </div>
+
+            .header_search {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .search {
+                width: 700px;
+                height: 50px;
+                border-radius: 20px;
+                border: none;
+                font-size: 1rem;
+                color: #ffffff;
+                background-color: rgba(26, 26, 26, 0.612);
+                padding-left: 20px;
+                margin: 20px;
+                font-size: 1,5rem;
+                font-weight: bold;
+            }
+            
+            .search::placeholder {
+                color: #4a4a4a;
+            }
+            
+            .search:focus {
+                outline: none;
+            
+            }
