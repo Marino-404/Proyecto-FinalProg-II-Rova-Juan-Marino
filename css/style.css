@@ -112,20 +112,8 @@ body{
     margin: 0 auto;
     max-width: 800px;
     background: linear-gradient(to right, rgb(62, 205, 0), rgb(255, 230, 0), rgb(255, 0, 0));
-    animation: move 2s infinite;
   }
   
-  @keyframes move {
-    0% {
-      width: 50%;
-    }
-    50% {
-      width: 100%;
-    }
-    100% {
-      width: 50%;
-    }
-  }
 
 .main {
     position: absolute;

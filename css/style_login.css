@@ -78,6 +78,7 @@ body{
     justify-content: center;
     background-color: #40404037;
     border-radius: 10px;
+    box-shadow: #313131 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.12) 0px 4px 6px -1px, rgba(0, 0, 0, 0.17) 0px 6px 6px -1px;
    
 }
 
