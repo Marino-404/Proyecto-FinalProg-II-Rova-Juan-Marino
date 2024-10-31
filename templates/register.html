@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse - AfroKáyaks</title>
-    <link rel="stylesheet" href="../css/style_register.css">
+    <link rel="stylesheet" href="../static/style_register.css">
     <link rel="shortcut icon" href="../logo/logo_oficial1.png" type="image/x-icon">
 </head>
 <body>
@@ -36,23 +36,24 @@
                 <form class="form">
 
                     <div class="register_form">
-
-                        <label class="label" for="">Nombre</label>
-                        <input class="input" type="text" required>
-
-                        <label class="label" for="">Apellido</label>
-                        <input class="input" type="text" required>
-
-                        <label class="label" for="">Dirección de correo electrónico</label>
-                        <input class="input" type="text" required>
+                        <label class="label" for="nombre">Nombre</label>
+                        <input class="input" type="text" name="nombre" required>
                     
-                        <label class="label" for="">Introduzca una contraseña</label>
-                        <input class="input" type="text" required>
-
-                        <label class="label" for="">Repita contraseña</label>
-                        <input class="input" type="password" required>
+                        <label class="label" for="apellido">Apellido</label>
+                        <input class="input" type="text" name="apellido" required>
+                    
+                        <label class="label" for="email">Dirección de correo electrónico</label>
+                        <input class="input" type="email" name="email" required>
                         
+                        <label class="label" for="password">Introduzca una contraseña</label>
+                        <input class="input" type="password" name="password" required>
+                    
+                        <label class="label" for="confirm_password">Repita contraseña</label>
+                        <input class="input" type="password" name="confirm_password" required>
+                        
+                        <button type="submit">Registrar</button>
                     </div>
+                    
               
                     <div class="register_form_button">
                         <a href="#" class="button" href="">Registrarse</a>

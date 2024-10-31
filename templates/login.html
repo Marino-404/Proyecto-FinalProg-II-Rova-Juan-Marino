@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicia Sesión - AfroKáyaks</title>
-    <link rel="stylesheet" href="../css/style_login.css" />
+    <link rel="stylesheet" href="../static/style_login.css" />
     <link
       rel="shortcut icon"
       href="../logo/logo_oficial1.png"
@@ -38,13 +38,15 @@
         <div class="login_form_container">
           <form class="form">
             <div class="login_form">
-              <label class="label" for=""
+              <label class="label" for="email"
                 >Ingrese su dirección de correo electrónico</label
               >
-              <input class="input" type="text" required />
+              <input class="input" type="email" name="email" required />
 
-              <label class="label" for="">Ingrese su contraseña</label>
-              <input class="input" type="password" required />
+              <label class="label" for="password">Ingrese su contraseña</label>
+              <input class="input" type="password" name="password" required />
+
+              <button type="submit">Iniciar Sesión</button>
             </div>
 
             <div class="login_form_button">
