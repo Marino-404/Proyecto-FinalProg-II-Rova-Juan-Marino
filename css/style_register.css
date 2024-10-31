@@ -1,211 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
 }
 
+.back_button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
+.back_button:hover {
+  text-decoration: underline 1px solid #ffffff;
+}
 
 .main_tittle {
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .main_title_text {
-    font-size: 5rem;
-    color: #ffffff;
+  font-size: 5rem;
+  color: #ffffff;
 }
 
 .subtittle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .main_description {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    border-bottom: 1px solid transparent;
-    border-image: linear-gradient(to right, rgb(62, 205, 0), rgb(255, 230, 0), rgb(255, 0, 0)) 1;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      rgb(62, 205, 0),
+      rgb(255, 230, 0),
+      rgb(255, 0, 0)
+    )
+    1;
 }
 
 .green {
-    color: rgba(0, 119, 0, 0.6);
+  color: rgba(0, 119, 0, 0.6);
 }
 
 .yellow {
-    color: rgba(214, 217, 23, 0.6);
+  color: rgba(214, 217, 23, 0.6);
 }
 
 .red {
-    color: rgba(255, 0, 0, 0.6);
+  color: rgba(255, 0, 0, 0.6);
 }
 
 .register_container {
-    width: 100%;
-    height: 102vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  width: 100%;
+  height: 102vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .register {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #40404037;
-    border-radius: 5px;  
-    box-shadow: #313131 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.12) 0px 4px 6px -1px, rgba(0, 0, 0, 0.17) 0px 6px 6px -1px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #40404037;
+  border-radius: 5px;
+  box-shadow: #313131 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px -1px, rgba(0, 0, 0, 0.17) 0px 6px 6px -1px;
 }
 
 .register_tittle {
-    font-size: 1rem;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .register_form_container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 
 .register_form_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 
 .register_form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .input {
-    width: 400px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 12px;
-    padding: 0 15px;
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-    outline: none;
-    margin: 20px;
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 0 15px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  margin: 20px;
 }
 
 .label {
-    position: relative;
-    top: 15px;
-    font-size: 12px;
-    color: #fff;
-    pointer-events: none;
-    transition: .3s;
+  position: relative;
+  top: 15px;
+  font-size: 12px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.3s;
 }
 
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 
 .login_button {
-    color: #FFFFFF;
-    
-    text-decoration: none;
-    font-size: 10px;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-size: 10px;
 }
 
 .login_button:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-
 .button {
-    padding: 10px;
-    text-decoration: none;
-    background-color: #FFFFFF;
-    color: #000000;
-    border-radius: 10px;
-    font-size: 1rem;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 .button:hover {
-    cursor: pointer;
-    background: linear-gradient(rgba(62, 205, 0, 0.300), rgba(255, 230, 0, 0.300), rgba(255, 0, 0, 0.300));
-    color: #000000;
-    transition: 0.2s;
+  cursor: pointer;
+  background: linear-gradient(
+    rgba(62, 205, 0, 0.3),
+    rgba(255, 230, 0, 0.3),
+    rgba(255, 0, 0, 0.3)
+  );
+  color: #000000;
+  transition: 0.2s;
 }
 
-
 .footer_container {
-    position: absolute;
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
 }
 
 .redes_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .payments_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .rights {
-    position: relative;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff43;
-    font-size: 0.8rem;
-    
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff43;
+  font-size: 0.8rem;
 }
-
