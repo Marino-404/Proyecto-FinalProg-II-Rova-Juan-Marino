@@ -146,6 +146,12 @@ body {
   margin: 20px;
 }
 
+.input::placeholder {
+  color: #fff;
+  font-family: poppins;
+  font-size: 12px;
+}
+
 .label {
   position: relative;
   top: 15px;
