@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse - AfroKáyaks</title>
-    <link rel="stylesheet" href="../static/style_register.css">
-    <link rel="shortcut icon" href="../logo/logo_oficial1.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_register.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo/logo_oficial1.png') }}" type="image/x-icon">
 </head>
 <body>
     
-    <a href="index.html" class="back_button">Volver al inicio</a>
+    <a href="{{ url_for('index') }}" class="back_button">Volver al inicio</a>
 
     <div class="tittle_container"></div>
         <div class="tittle">
@@ -33,7 +33,7 @@
             
             <div class="register_form_container">
 
-                <form class="form">
+                <form class="form" method="POST" action="{{ url_for('register') }}">
 
                     <div class="register_form">
                         <label class="label" for="nombre">Nombre</label>
@@ -51,16 +51,14 @@
                         <label class="label" for="confirm_password">Repita contraseña</label>
                         <input class="input" type="password" name="confirm_password" required>
                         
-                        <button type="submit">Registrar</button>
-                    </div>
-                    
-              
-                    <div class="register_form_button">
-                        <a href="#" class="button" href="">Registrarse</a>
+                        <div class="register_form_button">
+                            <button type="submit" class="button">Registrarse</button>
+                        </div>
+
                     </div>
 
                     <div class="login">
-                        <a class="login_button"  href="login.html">Ya tengo una cuenta</a>
+                        <a class="login_button" href="{{ url_for('login') }}">Ya tengo una cuenta</a>
                     </div>
 
                 </form>

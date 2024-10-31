@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AfroKáyaks - Tienda Online Oficial</title>
-    <link rel="stylesheet" href="../static/style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
     <link
       rel="shortcut icon"
-      href="../logo/logo_oficial1.png"
+      href="{{ url_for('static', filename='images/logo/logo_oficial1.png') }}"
       type="image/x-icon"
     />
   </head>
@@ -17,18 +20,18 @@
         <div class="header_logo">
           <img
             class="header_logo_img"
-            src="../images/logo/logo_oficial1.png"
+            src="{{ url_for('static', filename='images/logo/logo_oficial1.png') }}"
             alt=""
           />
         </div>
 
         <div class="header_menu">
           <div class="header_login">
-            <a class="login" href="../templates/login.html">Iniciar Sesion</a>
+            <a class="login" href="{{ url_for('login') }}">Iniciar Sesion</a>
           </div>
 
           <div class="header_register">
-            <a class="button" href="../templates/register.html">Registrarse</a>
+            <a class="button" href="{{ url_for('register') }}">Registrarse</a>
           </div>
         </div>
       </div>
@@ -79,36 +82,96 @@
             <h2 class="main_title_text">Káyaks</h2>
           </div>
           <p class="main_description">Tienda Online Oficial.</p>
-          <a class="button" href="../templates/products.html">Productos</a>
+          <a class="button" href="{{ url_for('products') }}">Productos</a>
         </div>
       </div>
     </main>
 
     <div class="brand_container">
       <section class="brand">
-        <img class="brand_img" src="../images/marcas/Captura1.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura2.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura3.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura4.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura5.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura6.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura7.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura8.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura9.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura10.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura11.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura12.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura13.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura14.PNG" alt="" />
-        <img class="brand_img" src="../images/marcas/Captura15.PNG" alt="" />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura1.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura2.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura3.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura4.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura5.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura6.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura7.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura8.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura9.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura10.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura11.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura12.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura13.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura14.PNG') }}"
+          alt=""
+        />
+        <img
+          class="brand_img"
+          src="{{ url_for('static', filename='images/marcas/Captura15.PNG') }}"
+          alt=""
+        />
       </section>
     </div>
 
     <footer class="footer_container">
       <div class="footer">
         <div class="redes_container">
-          <a class="redes" href="https://www.facebook.com"
-            ><svg
+          <a class="redes" href="https://www.facebook.com">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
               height="50"
@@ -117,8 +180,9 @@
             >
               <path
                 d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"
-              ></path></svg
-          ></a>
+              ></path>
+            </svg>
+          </a>
           <a class="redes" href="https://www.instagram.com"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -182,6 +246,6 @@
       </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../static/js/main.js"></script>
   </body>
 </html>
