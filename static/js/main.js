@@ -3,8 +3,11 @@ const images = 2;
 
 setInterval(() => {
   const currentImg = document.getElementById(`img${idx}`);
-  currentImg.classList.toggle("main_image_show");
-  currentImg.classList.toggle("main_image");
+
+  currentImg.classList.remove("slide-in-right");
+  currentImg.classList.add("slide-out-left");
+  currentImg.classList.remove("main_image_show");
+  currentImg.classList.add("main_image");
 
   idx++;
 
@@ -13,6 +16,9 @@ setInterval(() => {
   }
 
   const nextImg = document.getElementById(`img${idx}`);
-  nextImg.classList.toggle("main_image_show");
-  nextImg.classList.toggle("main_image");
+
+  nextImg.classList.remove("slide-out-left");
+  nextImg.classList.add("slide-in-right");
+  nextImg.classList.remove("main_image");
+  nextImg.classList.add("main_image_show");
 }, 4000);

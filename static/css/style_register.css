@@ -58,9 +58,9 @@ body {
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(
       to right,
-      rgb(62, 205, 0),
+      rgba(62, 205, 0, 0.15),
       rgb(255, 230, 0),
-      rgb(255, 0, 0)
+      rgb(255, 0, 0, 0.15)
     )
     1;
 }
