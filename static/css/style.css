@@ -71,6 +71,12 @@ body {
   margin: 20px;
 }
 
+.username {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
 .login {
   color: #ffffff;
   text-decoration: none;

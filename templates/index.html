@@ -21,18 +21,25 @@
           <img
             class="header_logo_img"
             src="{{ url_for('static', filename='images/logo/logo_oficial1.png') }}"
-            alt=""
+            alt="Logo de AfroKáyaks"
           />
         </div>
 
         <div class="header_menu">
+          {% if user %}
+          <div class="header_user">
+            <span class="username">¡Bienvenido, {{ user.nombre }}!</span>
+            <a class="button" href="{{ url_for('logout') }}">Cerrar sesión</a>
+          </div>
+          {% else %}
           <div class="header_login">
-            <a class="login" href="{{ url_for('login') }}">Iniciar Sesion</a>
+            <a class="login" href="{{ url_for('login') }}">Iniciar Sesión</a>
           </div>
 
           <div class="header_register">
             <a class="button" href="{{ url_for('register') }}">Registrarse</a>
           </div>
+          {% endif %}
         </div>
       </div>
     </header>
@@ -82,7 +89,7 @@
             <h2 class="main_title_text">Káyaks</h2>
           </div>
           <p class="main_description">Tienda Online Oficial.</p>
-          <a class="button" href="{{ url_for('login') }}">Productos</a>
+          <a class="button" href="{{ url_for('products') }}">Productos</a>
         </div>
       </div>
     </main>
