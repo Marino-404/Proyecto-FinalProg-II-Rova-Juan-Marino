@@ -6,6 +6,7 @@ import re
 app = Flask(__name__)
 app.secret_key = 'tu_secreto'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 class Usuario(db.Model):
@@ -97,7 +98,7 @@ def login():
         session.pop('errors', None)
         session['user_id'] = user.id
         flash('Inicio de sesión exitoso!')
-        return redirect(url_for('products'))
+        return redirect(url_for('index'))
 
     return render_template('login.html')
 

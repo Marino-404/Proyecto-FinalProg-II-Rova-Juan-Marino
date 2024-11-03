@@ -148,7 +148,8 @@ body {
   background: transparent;
   color: #fff;
   outline: none;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .input::placeholder {
