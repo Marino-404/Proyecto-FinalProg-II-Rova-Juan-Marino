@@ -7,6 +7,8 @@ app = Flask(__name__)
 app.secret_key = 'tu_secreto'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['DEBUG'] = True
+
 db = SQLAlchemy(app)
 
 class Usuario(db.Model):
@@ -107,9 +109,11 @@ def clear_errors(response):
     session.pop('errors', None)
     return response
 
-
 @app.route('/products')
 def products():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+
     return render_template('products.html') 
 
 
