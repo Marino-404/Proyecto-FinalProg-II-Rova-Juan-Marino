@@ -172,11 +172,108 @@ def clear_errors(response):
 def products():
     if 'user_id' not in session:  # Si no está en sesión, redirige al login
         return redirect(url_for('login'))
-    return render_template('products.html')  # Muestra la página de productos
+    
+    productos = [
+        {"id": 1, "nombre": "Producto 1", "precio": 157300, "descripcion": "Descripción del producto 1", "imagen": "images/productos/1.png"},
+        {"id": 2, "nombre": "Producto 2", "precio": 368200, "descripcion": "Descripción del producto 2", "imagen": "images/productos/2.png"},
+        {"id": 3, "nombre": "Producto 3", "precio": 157300, "descripcion": "Descripción del producto 3", "imagen": "images/productos/3.png"},
+        {"id": 4, "nombre": "Producto 4", "precio": 368200, "descripcion": "Descripción del producto 4", "imagen": "images/productos/4.png"},
+        {"id": 5, "nombre": "Producto 5", "precio": 157300, "descripcion": "Descripción del producto 5", "imagen": "images/productos/5.png"},
+        {"id": 6, "nombre": "Producto 6", "precio": 368200, "descripcion": "Descripción del producto 6", "imagen": "images/productos/6.png"},
+        {"id": 7, "nombre": "Producto 7", "precio": 157300, "descripcion": "Descripción del producto 7", "imagen": "images/productos/7.png"},
+        {"id": 8, "nombre": "Producto 8", "precio": 368200, "descripcion": "Descripción del producto 8", "imagen": "images/productos/8.png"},
+        {"id": 9, "nombre": "Producto 9", "precio": 157300, "descripcion": "Descripción del Producto 9", "imagen": "images/productos/9.png"},
+        {"id": 10, "nombre": "Producto 10", "precio": 368200, "descripcion": "Descripción del Producto 10", "imagen": "images/productos/10.png"},
+        {"id": 11, "nombre": "Producto 11", "precio": 157300, "descripcion": "Descripción del Producto 11", "imagen": "images/productos/11.png"},
+        {"id": 12, "nombre": "Producto 12", "precio": 368200, "descripcion": "Descripción del Producto 12", "imagen": "images/productos/12.png"},
+        {"id": 13, "nombre": "Producto 13", "precio": 157300, "descripcion": "Descripción del Producto 13", "imagen": "images/productos/13.png"},
+        {"id": 14, "nombre": "Producto 14", "precio": 368200, "descripcion": "Descripción del Producto 14", "imagen": "images/productos/14.png"},
+        {"id": 15, "nombre": "Producto 15", "precio":  368200, "descripcion": "Descripción del Producto 15", "imagen": "images/productos/15.png"},
+        {"id": 16, "nombre": "Producto 16", "precio": 368200, "descripcion": "Descripción del Producto 16", "imagen": "images/productos/16.png"},
+        {"id": 17, "nombre": "Producto 17", "precio": 157300, "descripcion": "Descripción del Producto 17", "imagen": "images/productos/17.png"},
+        {"id": 18, "nombre": "Producto 18", "precio": 368200, "descripcion": "Descripción del Producto 18", "imagen": "images/productos/18.png"},
+        {"id": 19, "nombre": "Producto 19", "precio": 157300, "descripcion": "Descripción del Producto 19", "imagen": "images/productos/19.png"},
+        {"id": 20, "nombre": "Producto 20", "precio": 157300, "descripcion": "Descripción del Producto 20", "imagen": "images/productos/20.png"},
+    ]
+    return render_template('products.html', productos=productos)
+
+# Ruta para agregar al carrito
+@app.route('/add_to_cart/<int:producto_id>')
+def add_to_cart(producto_id):
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+
+    # Lista de productos disponibles
+    productos = [
+        {"id": 1, "nombre": "Producto 1", "precio": 157300, "descripcion": "Descripción del producto 1", "imagen": "images/productos/1.png"},
+        {"id": 2, "nombre": "Producto 2", "precio": 368200, "descripcion": "Descripción del producto 2", "imagen": "images/productos/2.png"},
+        {"id": 3, "nombre": "Producto 3", "precio": 157300, "descripcion": "Descripción del producto 3", "imagen": "images/productos/3.png"},
+        {"id": 4, "nombre": "Producto 4", "precio": 368200, "descripcion": "Descripción del producto 4", "imagen": "images/productos/4.png"},
+        {"id": 5, "nombre": "Producto 5", "precio": 157300, "descripcion": "Descripción del producto 5", "imagen": "images/productos/5.png"},
+        {"id": 6, "nombre": "Producto 6", "precio": 368200, "descripcion": "Descripción del producto 6", "imagen": "images/productos/6.png"},
+        {"id": 7, "nombre": "Producto 7", "precio": 157300, "descripcion": "Descripción del producto 7", "imagen": "images/productos/7.png"},
+        {"id": 8, "nombre": "Producto 8", "precio": 368200, "descripcion": "Descripción del producto 8", "imagen": "images/productos/8.png"},
+        {"id": 9, "nombre": "Producto 9", "precio": 157300, "descripcion": "Descripción del Producto 9", "imagen": "images/productos/9.png"},
+        {"id": 10, "nombre": "Producto 10", "precio": 368200, "descripcion": "Descripción del Producto 10", "imagen": "images/productos/10.png"},
+        {"id": 11, "nombre": "Producto 11", "precio": 157300, "descripcion": "Descripción del Producto 11", "imagen": "images/productos/11.png"},
+        {"id": 12, "nombre": "Producto 12", "precio": 368200, "descripcion": "Descripción del Producto 12", "imagen": "images/productos/12.png"},
+        {"id": 13, "nombre": "Producto 13", "precio": 157300, "descripcion": "Descripción del Producto 13", "imagen": "images/productos/13.png"},
+        {"id": 14, "nombre": "Producto 14", "precio": 368200, "descripcion": "Descripción del Producto 14", "imagen": "images/productos/14.png"},
+        {"id": 15, "nombre": "Producto 15", "precio":  368200, "descripcion": "Descripción del Producto 15", "imagen": "images/productos/15.png"},
+        {"id": 16, "nombre": "Producto 16", "precio": 368200, "descripcion": "Descripción del Producto 16", "imagen": "images/productos/16.png"},
+        {"id": 17, "nombre": "Producto 17", "precio": 157300, "descripcion": "Descripción del Producto 17", "imagen": "images/productos/17.png"},
+        {"id": 18, "nombre": "Producto 18", "precio": 368200, "descripcion": "Descripción del Producto 18", "imagen": "images/productos/18.png"},
+        {"id": 19, "nombre": "Producto 19", "precio": 157300, "descripcion": "Descripción del Producto 19", "imagen": "images/productos/19.png"},
+        {"id": 20, "nombre": "Producto 20", "precio": 157300, "descripcion": "Descripción del Producto 20", "imagen": "images/productos/20.png"},
+        
+    ]
+
+    # Buscar el producto por su ID
+    producto = next((producto for producto in productos if producto['id'] == producto_id), None)
+
+    if producto:
+        carrito = session.get('carrito', [])
+        carrito.append(producto)  # Agregar el producto al carrito
+        session['carrito'] = carrito  # Guardar el carrito en la sesión
+
+    return redirect(url_for('cart'))
+
+# Ruta para ver el carrito
+@app.route('/cart')
+def cart():
+    if 'user_id' not in session:  # Verifica si el usuario está logueado
+        return redirect(url_for('login'))
+
+    # Obtener el carrito desde la sesión
+    carrito = session.get('carrito', [])
+    
+    # Calcular el total
+    total = sum(producto['precio'] for producto in carrito)
+
+    return render_template('cart.html', carrito=carrito, total=total)
+
+# Ruta para eliminar producto del carrito
+@app.route('/remove_from_cart/<int:producto_id>')
+def remove_from_cart(producto_id):
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+
+    carrito = session.get('carrito', [])
+    
+    # Eliminar el producto del carrito
+    carrito = [producto for producto in carrito if producto['id'] != producto_id]
+    
+    # Actualizar el carrito en la sesión
+    session['carrito'] = carrito
+    
+    return redirect(url_for('cart'))
+
 
 # Configuración para crear la base de datos y ejecutar la app
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Crea todas las tablas si no existen
     app.run(debug=True)  # Ejecuta la app en modo de depuración
+
+
 

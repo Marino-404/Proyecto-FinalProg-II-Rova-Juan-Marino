@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_cart.css') }}"
+    />
+  </head>
+  <body>
+    <a href="{{ url_for('products') }}" class="back_button"
+      >Volver a productos</a
+    >
+
+    <div class="tittle_container">
+      <div class="tittle">
+        <div class="main_tittle">
+          <h1 class="main_title_text">
+            <span>A</span><span class="green">f</span
+            ><span class="yellow">r</span><span class="red">o</span>
+          </h1>
+          <h2 class="main_title_text">Káyaks</h2>
+        </div>
+        <div class="subtittle">
+          <p class="main_description">Tienda Online Oficial.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart">
+      {% if carrito %} {% for producto in carrito %}
+      <div class="cart_item">
+        <img
+          src="{{ url_for('static', filename=producto['imagen']) }}"
+          alt="{{ producto['nombre'] }}"
+          class="cart_image"
+        />
+        <div class="cart_details">
+          <p class="cart_product_name">{{ producto['nombre'] }}</p>
+          <p class="cart_product_price">${{ producto['precio'] }}</p>
+        </div>
+        <button class="remove_button">
+          <a
+            href="{{ url_for('remove_from_cart', producto_id=producto['id']) }}"
+            >Eliminar</a
+          >
+        </button>
+      </div>
+      {% endfor %}
+      <div class="cart_summary">
+        <p>Total: <span class="total_price">${{ total }}</span></p>
+        <button class="checkout_button">Proceder al Pago</button>
+      </div>
+      {% else %}
+      <p>Tu carrito está vacío.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
