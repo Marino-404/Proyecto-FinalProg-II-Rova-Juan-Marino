@@ -1,3 +1,5 @@
+// Fotos del inicio
+
 let idx = 0;
 const images = 2;
 
