@@ -1,6 +1,4 @@
-// Espera a que todo el contenido del documento esté cargado antes de ejecutar el script.
 document.addEventListener("DOMContentLoaded", function () {
-  // Selecciona el primer formulario en la página.
   const form = document.querySelector("form");
 
   // Añade un evento que se activará cuando el formulario sea enviado.

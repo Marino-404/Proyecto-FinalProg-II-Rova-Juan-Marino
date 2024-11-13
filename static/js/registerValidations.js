@@ -1,6 +1,4 @@
-// Esperamos a que todo el contenido de la página esté cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleccionamos el formulario de la página
   const form = document.querySelector("form");
 
   // Añadimos un evento que se ejecutará cuando el formulario sea enviado

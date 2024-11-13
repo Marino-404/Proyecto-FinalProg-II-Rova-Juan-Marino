@@ -5,7 +5,7 @@ import re
 
 # Configuración básica de la aplicación Flask
 app = Flask(__name__)
-app.secret_key = 'tu_secreto'  # Clave secreta para manejar sesiones de usuario
+app.secret_key = 'utn2024'  # Clave secreta para manejar sesiones de usuario
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.db'  # Ruta de la base de datos
 app.config['DEBUG'] = True  # Activa el modo de depuración para ver errores en detalle
 
