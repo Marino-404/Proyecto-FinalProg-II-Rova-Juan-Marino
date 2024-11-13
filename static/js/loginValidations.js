@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-// Espera a que todo el contenido del documento esté cargado antes de ejecutar el script.
-=======
->>>>>>> 20ced4c10f6a049055f1337eb1884ae7e242b51d
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
 

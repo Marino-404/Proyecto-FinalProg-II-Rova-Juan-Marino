@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 
-// Esperamos a que todo el contenido de la página esté cargado antes de ejecutar el código
-=======
->>>>>>> 20ced4c10f6a049055f1337eb1884ae7e242b51d
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
 
