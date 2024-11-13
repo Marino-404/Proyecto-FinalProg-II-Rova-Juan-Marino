@@ -1,3 +1,4 @@
+
 // Espera a que todo el contenido del documento esté cargado antes de ejecutar el script.
 document.addEventListener("DOMContentLoaded", function () {
   // Selecciona el primer formulario en la página.
