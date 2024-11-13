@@ -174,27 +174,28 @@ def products():
         return redirect(url_for('login'))
     
     productos = [
-        {"id": 1, "nombre": "Producto 1", "precio": 157300, "descripcion": "Descripción del producto 1", "imagen": "images/productos/1.png"},
-        {"id": 2, "nombre": "Producto 2", "precio": 368200, "descripcion": "Descripción del producto 2", "imagen": "images/productos/2.png"},
-        {"id": 3, "nombre": "Producto 3", "precio": 157300, "descripcion": "Descripción del producto 3", "imagen": "images/productos/3.png"},
-        {"id": 4, "nombre": "Producto 4", "precio": 368200, "descripcion": "Descripción del producto 4", "imagen": "images/productos/4.png"},
-        {"id": 5, "nombre": "Producto 5", "precio": 157300, "descripcion": "Descripción del producto 5", "imagen": "images/productos/5.png"},
-        {"id": 6, "nombre": "Producto 6", "precio": 368200, "descripcion": "Descripción del producto 6", "imagen": "images/productos/6.png"},
-        {"id": 7, "nombre": "Producto 7", "precio": 157300, "descripcion": "Descripción del producto 7", "imagen": "images/productos/7.png"},
-        {"id": 8, "nombre": "Producto 8", "precio": 368200, "descripcion": "Descripción del producto 8", "imagen": "images/productos/8.png"},
-        {"id": 9, "nombre": "Producto 9", "precio": 157300, "descripcion": "Descripción del Producto 9", "imagen": "images/productos/9.png"},
-        {"id": 10, "nombre": "Producto 10", "precio": 368200, "descripcion": "Descripción del Producto 10", "imagen": "images/productos/10.png"},
-        {"id": 11, "nombre": "Producto 11", "precio": 157300, "descripcion": "Descripción del Producto 11", "imagen": "images/productos/11.png"},
-        {"id": 12, "nombre": "Producto 12", "precio": 368200, "descripcion": "Descripción del Producto 12", "imagen": "images/productos/12.png"},
-        {"id": 13, "nombre": "Producto 13", "precio": 157300, "descripcion": "Descripción del Producto 13", "imagen": "images/productos/13.png"},
-        {"id": 14, "nombre": "Producto 14", "precio": 368200, "descripcion": "Descripción del Producto 14", "imagen": "images/productos/14.png"},
-        {"id": 15, "nombre": "Producto 15", "precio":  368200, "descripcion": "Descripción del Producto 15", "imagen": "images/productos/15.png"},
-        {"id": 16, "nombre": "Producto 16", "precio": 368200, "descripcion": "Descripción del Producto 16", "imagen": "images/productos/16.png"},
-        {"id": 17, "nombre": "Producto 17", "precio": 157300, "descripcion": "Descripción del Producto 17", "imagen": "images/productos/17.png"},
-        {"id": 18, "nombre": "Producto 18", "precio": 368200, "descripcion": "Descripción del Producto 18", "imagen": "images/productos/18.png"},
-        {"id": 19, "nombre": "Producto 19", "precio": 157300, "descripcion": "Descripción del Producto 19", "imagen": "images/productos/19.png"},
-        {"id": 20, "nombre": "Producto 20", "precio": 157300, "descripcion": "Descripción del Producto 20", "imagen": "images/productos/20.png"},
+    {"id": 1, "nombre": "Explorer Pro", "precio": 157300, "descripcion": "Kayak de alta resistencia ideal para explorar ríos tranquilos. Disfruta de tu aventura por solo 3 cuotas de $52,433", "imagen": "images/productos/1.png"},
+    {"id": 2, "nombre": "Fisher's Edge", "precio": 368200, "descripcion": "Kayak de pesca, perfecto para largas jornadas en el agua. Hazlo tuyo en 6 cuotas de $61,367", "imagen": "images/productos/2.png"},
+    {"id": 3, "nombre": "Aqua Glide", "precio": 157300, "descripcion": "Kayak inflable ultraligero para todo tipo de condiciones. Viaja por lagos y ríos, 12 cuotas de $13,108", "imagen": "images/productos/3.png"},
+    {"id": 4, "nombre": "Carbon Swift", "precio": 368200, "descripcion": "Kayak deportivo de fibra de carbono. Agilidad y velocidad para los más exigentes. Paga en 6 cuotas de $61,367", "imagen": "images/productos/4.png"},
+    {"id": 5, "nombre": "Beginner's Flow", "precio": 157300, "descripcion": "Kayak para principiantes con gran estabilidad. Ideal para excursiones familiares. 3 cuotas de $52,433", "imagen": "images/productos/5.png"},
+    {"id": 6, "nombre": "Dual Voyager", "precio": 368200, "descripcion": "Kayak de dos plazas para compartir con un amigo o pareja. Experimenta el agua juntos en 12 cuotas de $13,108", "imagen": "images/productos/6.png"},
+    {"id": 7, "nombre": "Ergo Glide", "precio": 157300, "descripcion": "Kayak con diseño ergonómico para mayor confort. Disfruta de largas jornadas remando. 6 cuotas de $61,367", "imagen": "images/productos/7.png"},
+    {"id": 8, "nombre": "River Raider", "precio": 368200, "descripcion": "Kayak especializado en navegación en aguas bravas. Paga en 3 cuotas de $52,433 y desafía las corrientes", "imagen": "images/productos/8.png"},
+    {"id": 9, "nombre": "Coastal Cruiser", "precio": 157300, "descripcion": "Kayak recreativo para paseos tranquilos por la costa. Siente el viento en tu rostro, paga en 12 cuotas de $13,108", "imagen": "images/productos/9.png"},
+    {"id": 10, "nombre": "Endurance Trek", "precio": 368200, "descripcion": "Kayak de travesía para largas distancias. Resistente y rápido, 6 cuotas de $61,367", "imagen": "images/productos/10.png"},
+    {"id": 11, "nombre": "Family Explorer", "precio": 157300, "descripcion": "Kayak modular, se adapta a tus necesidades de espacio. Perfecto para excursiones familiares. 3 cuotas de $52,433", "imagen": "images/productos/11.png"},
+    {"id": 12, "nombre": "LightWave", "precio": 368200, "descripcion": "Kayak de fibra de vidrio ultraligero, ideal para aventuras de larga duración. Disfruta de 12 cuotas de $13,108", "imagen": "images/productos/12.png"},
+    {"id": 13, "nombre": "Mountain Rush", "precio": 157300, "descripcion": "Kayak de montaña para aguas turbulentas. La emoción de navegar en 3 cuotas de $52,433", "imagen": "images/productos/13.png"},
+    {"id": 14, "nombre": "Ocean Voyager", "precio": 368200, "descripcion": "Kayak para navegación en mar abierto, con gran capacidad de carga. 6 cuotas de $61,367 para una experiencia única", "imagen": "images/productos/14.png"},
+    {"id": 15, "nombre": "Speedmaster", "precio": 368200, "descripcion": "Kayak de competición, velocidad y precisión en cada remada. 12 cuotas de $13,108, sin comprometer el rendimiento", "imagen": "images/productos/15.png"},
+    {"id": 16, "nombre": "Weekend Wanderer", "precio": 368200, "descripcion": "Kayak ligero y resistente, fácil de transportar. Perfecto para las escapadas de fin de semana. 6 cuotas de $61,367", "imagen": "images/productos/16.png"},
+    {"id": 17, "nombre": "Solo Adventurer", "precio": 157300, "descripcion": "Kayak individual para los más aventureros. Prepárate para explorar nuevos destinos por 3 cuotas de $52,433", "imagen": "images/productos/17.png"},
+    {"id": 18, "nombre": "Hybrid Explorer", "precio": 368200, "descripcion": "Kayak híbrido, combina lo mejor del kayak tradicional y el inflable. Comienza tu aventura con 12 cuotas de $13,108", "imagen": "images/productos/18.png"},
+    {"id": 19, "nombre": "Stability Pro", "precio": 157300, "descripcion": "Kayak de alta flotabilidad para mayor estabilidad. Ideal para navegar en aguas tranquilas o ligeramente agitadas. 3 cuotas de $52,433", "imagen": "images/productos/19.png"},
+    {"id": 20, "nombre": "Expedition Cruiser", "precio": 157300, "descripcion": "Kayak de alta capacidad para travesías largas. Con espacio suficiente para todo lo que necesites. Disfruta de 6 cuotas de $61,367", "imagen": "images/productos/20.png"},
     ]
+
     return render_template('products.html', productos=productos)
 
 # Ruta para agregar al carrito
@@ -205,28 +206,28 @@ def add_to_cart(producto_id):
 
     # Lista de productos disponibles
     productos = [
-        {"id": 1, "nombre": "Producto 1", "precio": 157300, "descripcion": "Descripción del producto 1", "imagen": "images/productos/1.png"},
-        {"id": 2, "nombre": "Producto 2", "precio": 368200, "descripcion": "Descripción del producto 2", "imagen": "images/productos/2.png"},
-        {"id": 3, "nombre": "Producto 3", "precio": 157300, "descripcion": "Descripción del producto 3", "imagen": "images/productos/3.png"},
-        {"id": 4, "nombre": "Producto 4", "precio": 368200, "descripcion": "Descripción del producto 4", "imagen": "images/productos/4.png"},
-        {"id": 5, "nombre": "Producto 5", "precio": 157300, "descripcion": "Descripción del producto 5", "imagen": "images/productos/5.png"},
-        {"id": 6, "nombre": "Producto 6", "precio": 368200, "descripcion": "Descripción del producto 6", "imagen": "images/productos/6.png"},
-        {"id": 7, "nombre": "Producto 7", "precio": 157300, "descripcion": "Descripción del producto 7", "imagen": "images/productos/7.png"},
-        {"id": 8, "nombre": "Producto 8", "precio": 368200, "descripcion": "Descripción del producto 8", "imagen": "images/productos/8.png"},
-        {"id": 9, "nombre": "Producto 9", "precio": 157300, "descripcion": "Descripción del Producto 9", "imagen": "images/productos/9.png"},
-        {"id": 10, "nombre": "Producto 10", "precio": 368200, "descripcion": "Descripción del Producto 10", "imagen": "images/productos/10.png"},
-        {"id": 11, "nombre": "Producto 11", "precio": 157300, "descripcion": "Descripción del Producto 11", "imagen": "images/productos/11.png"},
-        {"id": 12, "nombre": "Producto 12", "precio": 368200, "descripcion": "Descripción del Producto 12", "imagen": "images/productos/12.png"},
-        {"id": 13, "nombre": "Producto 13", "precio": 157300, "descripcion": "Descripción del Producto 13", "imagen": "images/productos/13.png"},
-        {"id": 14, "nombre": "Producto 14", "precio": 368200, "descripcion": "Descripción del Producto 14", "imagen": "images/productos/14.png"},
-        {"id": 15, "nombre": "Producto 15", "precio":  368200, "descripcion": "Descripción del Producto 15", "imagen": "images/productos/15.png"},
-        {"id": 16, "nombre": "Producto 16", "precio": 368200, "descripcion": "Descripción del Producto 16", "imagen": "images/productos/16.png"},
-        {"id": 17, "nombre": "Producto 17", "precio": 157300, "descripcion": "Descripción del Producto 17", "imagen": "images/productos/17.png"},
-        {"id": 18, "nombre": "Producto 18", "precio": 368200, "descripcion": "Descripción del Producto 18", "imagen": "images/productos/18.png"},
-        {"id": 19, "nombre": "Producto 19", "precio": 157300, "descripcion": "Descripción del Producto 19", "imagen": "images/productos/19.png"},
-        {"id": 20, "nombre": "Producto 20", "precio": 157300, "descripcion": "Descripción del Producto 20", "imagen": "images/productos/20.png"},
-        
+    {"id": 1, "nombre": "Explorer Pro", "precio": 157300, "descripcion": "Kayak de alta resistencia ideal para explorar ríos tranquilos. Disfruta de tu aventura por solo 3 cuotas de $52,433", "imagen": "images/productos/1.png"},
+    {"id": 2, "nombre": "Fisher's Edge", "precio": 368200, "descripcion": "Kayak de pesca, perfecto para largas jornadas en el agua. Hazlo tuyo en 6 cuotas de $61,367", "imagen": "images/productos/2.png"},
+    {"id": 3, "nombre": "Aqua Glide", "precio": 157300, "descripcion": "Kayak inflable ultraligero para todo tipo de condiciones. Viaja por lagos y ríos, 12 cuotas de $13,108", "imagen": "images/productos/3.png"},
+    {"id": 4, "nombre": "Carbon Swift", "precio": 368200, "descripcion": "Kayak deportivo de fibra de carbono. Agilidad y velocidad para los más exigentes. Paga en 6 cuotas de $61,367", "imagen": "images/productos/4.png"},
+    {"id": 5, "nombre": "Beginner's Flow", "precio": 157300, "descripcion": "Kayak para principiantes con gran estabilidad. Ideal para excursiones familiares. 3 cuotas de $52,433", "imagen": "images/productos/5.png"},
+    {"id": 6, "nombre": "Dual Voyager", "precio": 368200, "descripcion": "Kayak de dos plazas para compartir con un amigo o pareja. Experimenta el agua juntos en 12 cuotas de $13,108", "imagen": "images/productos/6.png"},
+    {"id": 7, "nombre": "Ergo Glide", "precio": 157300, "descripcion": "Kayak con diseño ergonómico para mayor confort. Disfruta de largas jornadas remando. 6 cuotas de $61,367", "imagen": "images/productos/7.png"},
+    {"id": 8, "nombre": "River Raider", "precio": 368200, "descripcion": "Kayak especializado en navegación en aguas bravas. Paga en 3 cuotas de $52,433 y desafía las corrientes", "imagen": "images/productos/8.png"},
+    {"id": 9, "nombre": "Coastal Cruiser", "precio": 157300, "descripcion": "Kayak recreativo para paseos tranquilos por la costa. Siente el viento en tu rostro, paga en 12 cuotas de $13,108", "imagen": "images/productos/9.png"},
+    {"id": 10, "nombre": "Endurance Trek", "precio": 368200, "descripcion": "Kayak de travesía para largas distancias. Resistente y rápido, 6 cuotas de $61,367", "imagen": "images/productos/10.png"},
+    {"id": 11, "nombre": "Family Explorer", "precio": 157300, "descripcion": "Kayak modular, se adapta a tus necesidades de espacio. Perfecto para excursiones familiares. 3 cuotas de $52,433", "imagen": "images/productos/11.png"},
+    {"id": 12, "nombre": "LightWave", "precio": 368200, "descripcion": "Kayak de fibra de vidrio ultraligero, ideal para aventuras de larga duración. Disfruta de 12 cuotas de $13,108", "imagen": "images/productos/12.png"},
+    {"id": 13, "nombre": "Mountain Rush", "precio": 157300, "descripcion": "Kayak de montaña para aguas turbulentas. La emoción de navegar en 3 cuotas de $52,433", "imagen": "images/productos/13.png"},
+    {"id": 14, "nombre": "Ocean Voyager", "precio": 368200, "descripcion": "Kayak para navegación en mar abierto, con gran capacidad de carga. 6 cuotas de $61,367 para una experiencia única", "imagen": "images/productos/14.png"},
+    {"id": 15, "nombre": "Speedmaster", "precio": 368200, "descripcion": "Kayak de competición, velocidad y precisión en cada remada. 12 cuotas de $13,108, sin comprometer el rendimiento", "imagen": "images/productos/15.png"},
+    {"id": 16, "nombre": "Weekend Wanderer", "precio": 368200, "descripcion": "Kayak ligero y resistente, fácil de transportar. Perfecto para las escapadas de fin de semana. 6 cuotas de $61,367", "imagen": "images/productos/16.png"},
+    {"id": 17, "nombre": "Solo Adventurer", "precio": 157300, "descripcion": "Kayak individual para los más aventureros. Prepárate para explorar nuevos destinos por 3 cuotas de $52,433", "imagen": "images/productos/17.png"},
+    {"id": 18, "nombre": "Hybrid Explorer", "precio": 368200, "descripcion": "Kayak híbrido, combina lo mejor del kayak tradicional y el inflable. Comienza tu aventura con 12 cuotas de $13,108", "imagen": "images/productos/18.png"},
+    {"id": 19, "nombre": "Stability Pro", "precio": 157300, "descripcion": "Kayak de alta flotabilidad para mayor estabilidad. Ideal para navegar en aguas tranquilas o ligeramente agitadas. 3 cuotas de $52,433", "imagen": "images/productos/19.png"},
+    {"id": 20, "nombre": "Expedition Cruiser", "precio": 157300, "descripcion": "Kayak de alta capacidad para travesías largas. Con espacio suficiente para todo lo que necesites. Disfruta de 6 cuotas de $61,367", "imagen": "images/productos/20.png"},
     ]
+
 
     # Buscar el producto por su ID
     producto = next((producto for producto in productos if producto['id'] == producto_id), None)
